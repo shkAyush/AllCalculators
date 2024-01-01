@@ -2,6 +2,7 @@ import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "../screens/home";
+import GstCalculator from "../screens/gstCalculators";
 const Stack = createStackNavigator();
 function Routes() {
   return (
@@ -16,6 +17,11 @@ function Routes() {
         <Stack.Screen
           name="Home"
           component={Home}
+          options={{headerShown: false}}
+        />
+           <Stack.Screen
+          name="GstCalculator"
+          component={GstCalculator}
           options={{headerShown: false}}
         /> 
       </Stack.Navigator>
