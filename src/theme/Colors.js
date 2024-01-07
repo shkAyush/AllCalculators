@@ -10,8 +10,9 @@ const Colors = {
       SKY_BLUE: "#87CEEB",
     },
     secondary: {
-        LIGHT_BLUE:"#ADD8E6"
-  
+        LIGHT_BLUE:"#ADD8E6",
+        MAGNOLIA:"#f3f6fe",
+        NIGHT:"#070707",
       
   
   

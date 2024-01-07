@@ -4,6 +4,8 @@ import styles from './styles';
 import AppButton from '../../component/commonButton';
 import AppInput from '../../component/commonTextInputs';
 import KeyboardScroll from '../../component/keyboardScroll';
+import AppHeader from '../../navigation/appHeader';
+import imagePath from '../../theme/imagePath';
 
 const GstCalculator = props => {
   const [originalAmount, setOriginalAmount] = useState('');
@@ -12,6 +14,19 @@ const GstCalculator = props => {
   const [totalAmount, setTotalAmount] = useState();
   const [keyboardStatus, setKeyboardStatus] = useState(false);
   const amountRef = useRef(null);
+
+  useEffect(() => {
+    AppHeader({
+      ...props,
+      leftIcon: true,
+      leftImage: imagePath.arrowRight,
+      headerTitle: true,
+      Title: 'GST Calculator',
+      leftClick: () => {
+        props.navigation.goBack();
+      },
+    });
+  }, []);
 
   useEffect(() => {
     const showSubscription = Keyboard.addListener('keyboardDidShow', e => {
@@ -47,10 +62,8 @@ const GstCalculator = props => {
   return (
     <View style={styles.container}>
       <KeyboardScroll>
-        <Text style={styles.titleText}>GST Calculator</Text>
         <AppInput
           marginTop={26}
-          placeholder={'Enter Amount:'}
           keyboardType={'numeric'}
           value={originalAmount}
           onChangeText={text => setOriginalAmount(text)}
@@ -62,7 +75,6 @@ const GstCalculator = props => {
 
         <AppInput
           marginTop={26}
-          placeholder={'Enter GST rate:'}
           keyboardType={'numeric'}
           value={gstRate}
           onChangeText={text => setGstRate(text)}
@@ -87,7 +99,7 @@ const GstCalculator = props => {
       </KeyboardScroll>
       {!keyboardStatus ? (
         <View style={styles.buttonView}>
-          <AppButton title={'GST'} onPress={() => calculateGst()} />
+          <AppButton title={'Calculate Gst'} onPress={() => calculateGst()} />
         </View>
       ) : (
         <></>

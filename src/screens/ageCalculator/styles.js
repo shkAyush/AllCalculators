@@ -7,12 +7,10 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.secondary.MAGNOLIA,
   },
-  input: {
-    height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
-    marginBottom: 16,
-    paddingHorizontal: 8,
+  buttonView: {
+    width: '100%',
+    position: 'absolute',
+    bottom: 20,
   },
   resultView: {
     borderColor: Colors.primary.BLACK,
@@ -24,15 +22,10 @@ const styles = StyleSheet.create({
     paddingLeft: 15,
     marginTop: 40,
   },
-  totalView: {
-    borderColor: Colors.primary.BLACK,
-    borderWidth: 1,
-    height: 40,
-    borderRadius: 30,
-    marginHorizontal: 18,
-    justifyContent: 'center',
-    paddingLeft: 15,
-    marginTop: 20,
+  resultText: {
+    fontFamily: fonts.Montserrat_Regular,
+    fontSize: fonts.SIZE_14,
+    color: Colors.primary.BLACK,
   },
   gstAmountLabel: {
     position: 'absolute',
@@ -41,16 +34,6 @@ const styles = StyleSheet.create({
     left: 30,
     fontFamily: fonts.Montserrat_Bold,
     fontSize: fonts.SIZE_15,
-  },
-  resultText: {
-    fontFamily: fonts.Montserrat_Regular,
-    fontSize: fonts.SIZE_14,
-    color: Colors.primary.BLACK,
-  },
-  buttonView: {
-    width: '100%',
-    position: 'absolute',
-    bottom: 20,
   },
 });
 

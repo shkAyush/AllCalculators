@@ -1,8 +1,9 @@
-import * as React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
-import Home from "../screens/home";
-import GstCalculator from "../screens/gstCalculators";
+import * as React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+import Home from '../screens/home';
+import GstCalculator from '../screens/gstCalculators';
+import AgeCalculator from '../screens/ageCalculator';
 const Stack = createStackNavigator();
 function Routes() {
   return (
@@ -19,11 +20,16 @@ function Routes() {
           component={Home}
           options={{headerShown: false}}
         />
-           <Stack.Screen
+        <Stack.Screen
           name="GstCalculator"
           component={GstCalculator}
-          options={{headerShown: false}}
-        /> 
+          options={{headerShown: true}}
+        />
+        <Stack.Screen
+          name="AgeCalculator"
+          component={AgeCalculator}
+          options={{headerShown: true}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
