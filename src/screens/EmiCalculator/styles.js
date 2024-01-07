@@ -7,11 +7,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.secondary.MAGNOLIA,
   },
-  buttonView: {
-    width: '100%',
-    position: 'absolute',
-    bottom: 20,
-  },
   resultView: {
     borderColor: Colors.primary.BLACK,
     borderWidth: 1,
@@ -35,10 +30,12 @@ const styles = StyleSheet.create({
     fontFamily: fonts.Montserrat_Bold,
     fontSize: fonts.SIZE_15,
   },
-  age_calculator: {
-    height: 50,
-    width: 50,
+  buttonView: {
+    width: '100%',
+    position: 'absolute',
+    bottom: 20,
   },
+
 });
 
 export default styles;

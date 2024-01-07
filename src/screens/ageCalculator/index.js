@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react';
-import {View, Text, TextInput, Button, Keyboard} from 'react-native';
+import {View, Text, TextInput, Button, Keyboard, Image} from 'react-native';
 import AppInput from '../../component/commonTextInputs';
 import AppButton from '../../component/commonButton';
 import styles from './styles';
 import AppHeader from '../../navigation/appHeader';
 import imagePath from '../../theme/imagePath';
 
-const AgeCalculator = (props) => {
+const AgeCalculator = props => {
   const [birthYear, setBirthYear] = useState('');
   const [age, setAge] = useState('');
   const [keyboardStatus, setKeyboardStatus] = useState(false);
@@ -49,6 +49,11 @@ const AgeCalculator = (props) => {
 
   return (
     <View style={styles.container}>
+      <Image
+        source={imagePath.age_calculator}
+        resizeMode={'contain'}
+        style={styles.age_calculator}
+      />
       <AppInput
         marginTop={26}
         keyboardType={'numeric'}

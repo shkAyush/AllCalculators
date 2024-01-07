@@ -22,6 +22,14 @@ const Home = props => {
         activeOpacity={0.8}>
         <Text style={styles.gstText}>AGE Calculator</Text>
       </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.gstTouch}
+        onPress={() => {
+          props.navigation.navigate('EMICalculator');
+        }}
+        activeOpacity={0.8}>
+        <Text style={styles.gstText}>EMI Calculator</Text>
+      </TouchableOpacity>
     </View>
   );
 };

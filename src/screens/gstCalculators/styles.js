@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   gstAmountLabel: {
     position: 'absolute',
     top: -10,
-    backgroundColor: Colors.primary.WHITE,
+    backgroundColor: Colors.secondary.MAGNOLIA,
     left: 30,
     fontFamily: fonts.Montserrat_Bold,
     fontSize: fonts.SIZE_15,
