@@ -30,6 +30,14 @@ const Home = props => {
         activeOpacity={0.8}>
         <Text style={styles.gstText}>EMI Calculator</Text>
       </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.gstTouch}
+        onPress={() => {
+          props.navigation.navigate('FDCalculator');
+        }}
+        activeOpacity={0.8}>
+        <Text style={styles.gstText}>FD Calculator</Text>
+      </TouchableOpacity>
     </View>
   );
 };

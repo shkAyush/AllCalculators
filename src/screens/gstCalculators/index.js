@@ -82,20 +82,22 @@ const GstCalculator = props => {
           returnKeyType={'done'}
           labelText={'GST Rate (%)'}
         />
-
-        <View style={styles.resultView}>
-          <Text style={styles.resultText} numberOfLines={1}>
-            {gstAmount}
-          </Text>
-          <Text style={styles.gstAmountLabel}>GST Amount</Text>
-        </View>
-
-        <View style={styles.totalView}>
-          <Text style={styles.resultText} numberOfLines={1}>
-            {totalAmount}
-          </Text>
-          <Text style={styles.gstAmountLabel}>Total Amount</Text>
-        </View>
+        {gstAmount ? (
+          <View style={styles.resultView}>
+            <Text style={styles.resultText} numberOfLines={1}>
+              {gstAmount}
+            </Text>
+            <Text style={styles.gstAmountLabel}>GST Amount</Text>
+          </View>
+        ) : null}
+        {totalAmount ? (
+          <View style={styles.totalView}>
+            <Text style={styles.resultText} numberOfLines={1}>
+              {totalAmount}
+            </Text>
+            <Text style={styles.gstAmountLabel}>Total Amount</Text>
+          </View>
+        ) : null}
       </KeyboardScroll>
       {!keyboardStatus ? (
         <View style={styles.buttonView}>

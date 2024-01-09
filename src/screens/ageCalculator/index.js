@@ -49,11 +49,11 @@ const AgeCalculator = props => {
 
   return (
     <View style={styles.container}>
-      <Image
+      {/* <Image
         source={imagePath.age_calculator}
         resizeMode={'contain'}
         style={styles.age_calculator}
-      />
+      /> */}
       <AppInput
         marginTop={26}
         keyboardType={'numeric'}
@@ -62,12 +62,14 @@ const AgeCalculator = props => {
         returnKeyType={'done'}
         labelText={'Enter your birthYear'}
       />
-      <View style={styles.resultView}>
-        <Text style={styles.resultText} numberOfLines={1}>
-          {age}
-        </Text>
-        <Text style={styles.gstAmountLabel}>Your Age</Text>
-      </View>
+      {age ? (
+        <View style={styles.resultView}>
+          <Text style={styles.resultText} numberOfLines={1}>
+            {age}
+          </Text>
+          <Text style={styles.gstAmountLabel}>Your Age</Text>
+        </View>
+      ) : null}
       {!keyboardStatus ? (
         <View style={styles.buttonView}>
           <AppButton title={'Calculate Age'} onPress={calculateAge} />

@@ -5,6 +5,7 @@ import Home from '../screens/home';
 import GstCalculator from '../screens/gstCalculators';
 import AgeCalculator from '../screens/ageCalculator';
 import EMICalculator from '../screens/EmiCalculator';
+import FDCalculator from '../screens/fdCalculator';
 const Stack = createStackNavigator();
 function Routes() {
   return (
@@ -34,6 +35,11 @@ function Routes() {
           <Stack.Screen
           name="EMICalculator"
           component={EMICalculator}
+          options={{headerShown: true}}
+        />
+        <Stack.Screen
+          name="FDCalculator"
+          component={FDCalculator}
           options={{headerShown: true}}
         />
       </Stack.Navigator>
